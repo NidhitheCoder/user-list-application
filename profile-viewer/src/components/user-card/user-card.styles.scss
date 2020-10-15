@@ -1,0 +1,18 @@
+.user-card {
+  height: 250px !important;
+  width: 90%;
+  background: #fff;
+  border: 1px solid darkgray;
+  margin: 3vh auto;
+  color:green;
+  border-radius: 4px;
+  box-shadow: 6px 10px 5px black;
+}
+
+.user-card:nth-child(1){
+    margin-top: 10vh;
+}
+
+.user-card:last-child{
+    margin-bottom: 10vh;
+}
