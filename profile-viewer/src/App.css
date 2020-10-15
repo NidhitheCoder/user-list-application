@@ -1,0 +1,8 @@
+/* *{   
+   transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
+} */
+
+*{
+  margin:0;
+  padding:0;
+}

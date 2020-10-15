@@ -1,0 +1,40 @@
+.app-bar {
+    background:#b800c8 !important;
+
+  .navigation-container {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .navigation-button {
+      height: 30px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      margin:0 3vw;
+      padding:0 3vh;
+      border-radius: 4px;
+       &:active{
+           color:blue;
+       }
+    }
+
+    .search {
+      background: rgba(255, 255, 255, 0.15);
+      height: 30px;
+      min-width: 250px;
+      width: 30vw;
+      border-radius: 5px;
+      color: #fff;
+      padding-left: 10px;
+      margin: 0 2vw;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+  }
+}
