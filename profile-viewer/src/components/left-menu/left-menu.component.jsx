@@ -3,7 +3,7 @@ import "./left-menu.styles.scss";
 import { connect } from "react-redux";
 
 import UserCard from "../user-card/user-card.component";
-import images from "../../assets/userData";
+import image from "../../assets/userData";
 import { addUsersDataToStore } from "../../redux/usersData/users-data.action";
 
 class LeftMenu extends React.Component {
@@ -11,30 +11,29 @@ class LeftMenu extends React.Component {
     let { usersData } = this.props;
     fetch("https://gorest.co.in/public-api/users")
       .then(response => response.json())
-      .then(data =>{
+      .then(data => {
         data = data.data;
-        for(let i=0;i< data.length;i++){
-          data[i].imgUrl = images[i].imgUrl
-        }
-        console.log(data);
-        usersData(data)});
+        data.forEach(element => {
+          element.imgUrl = element.gender == "Male" ? image.male : image.female;
+        });
+        usersData(data);
+      });
   }
 
   render() {
-    const {dataFromStore} = this.props;
+    const { dataFromStore } = this.props;
     return (
       <div className="left-menu">
-        {dataFromStore && dataFromStore.map(user => (
-          <UserCard key={user.id} user={user} />
-        ))}
+        {dataFromStore &&
+          dataFromStore.map(user => <UserCard key={user.id} user={user} />)}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
- dataFromStore : state.userData.usersData
-})
+  dataFromStore: state.userData.usersData
+});
 
 const mapDispatchToProps = dispatch => ({
   usersData: data => dispatch(addUsersDataToStore(data))
