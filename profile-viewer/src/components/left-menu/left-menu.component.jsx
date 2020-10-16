@@ -14,7 +14,7 @@ class LeftMenu extends React.Component {
       .then(data => {
         data = data.data;
         data.forEach(element => {
-          element.imgUrl = element.gender == "Male" ? image.male : image.female;
+          element.imgUrl = element.gender === "Male" ? image.male : image.female;
         });
         usersData(data);
       });
