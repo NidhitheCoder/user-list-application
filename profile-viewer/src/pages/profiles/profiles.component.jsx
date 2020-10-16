@@ -1,9 +1,12 @@
 import React from "react";
-import './profiles.styles.scss'
+import './profiles.styles.scss';
+
+import ContentSection from '../../components/content/content.component'
 
 const Profiles = () => (
   <div className="profiles-container">
-    <h1>Profiles page</h1>
+    <ContentSection />
   </div>
 );
+
 export default Profiles;
