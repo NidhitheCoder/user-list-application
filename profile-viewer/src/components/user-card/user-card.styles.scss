@@ -1,12 +1,20 @@
 .user-card {
   height: 250px !important;
-  width: 90%;
+  width: 80%;
   background: #fff;
-  border: 1px solid darkgray;
+  border: 1px solid grey;
   margin: 3vh auto;
-  color:green;
+  color: #b800c8;
   border-radius: 4px;
-  box-shadow: 6px 10px 5px black;
+  box-shadow: 1px 1px 2px #fff;
+  text-align: center;
+  padding:25px 5px 5px 5px;
+
+  .user-img{
+    height:60%;
+    width:70%;
+    margin-bottom: 10px;
+  }
 }
 
 .user-card:nth-child(1){
