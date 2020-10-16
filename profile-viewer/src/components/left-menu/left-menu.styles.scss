@@ -1,0 +1,12 @@
+.left-menu {
+  background: purple;
+  width: 20vw;
+  min-width: 200px;
+  height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none; 
+}
+
+.left-menu::-webkit-scrollbar{
+  display: none;
+}
