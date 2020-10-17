@@ -3,7 +3,8 @@ import usersDataActionTypes from "./users-data.types";
 
 const INITIAL_STATE = {
   usersData: [],
-  currentUser:null
+  currentUser: null,
+  searchValue: ""
 };
 
 const usersReducer = (state = INITIAL_STATE, action) => {
@@ -14,11 +15,16 @@ const usersReducer = (state = INITIAL_STATE, action) => {
         usersData: action.payload
       };
 
-      case usersDataActionTypes.ADD_CURRENT_USER:
-        return {
-          ...state,
-          currentUser:action.payload
-        }
+    case usersDataActionTypes.ADD_CURRENT_USER:
+      return {
+        ...state,
+        currentUser: action.payload
+      };
+    case usersdataActionTypes.ADD_SEARCH:
+      return {
+        ...state,
+        searchValue: action.payload
+      };
 
     default:
       return {

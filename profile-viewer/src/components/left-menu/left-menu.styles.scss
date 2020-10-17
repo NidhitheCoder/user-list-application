@@ -4,9 +4,10 @@
   min-width: 200px;
   height: 100vh;
   overflow: scroll;
-  scrollbar-width: none; 
-}
+  scrollbar-width: none;
+  position: relative;
 
-.left-menu::-webkit-scrollbar{
-  display: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

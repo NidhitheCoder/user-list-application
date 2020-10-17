@@ -1,11 +1,11 @@
 import React from "react";
 import './profiles.styles.scss';
 
-import ContentSection from '../../components/content/content.component'
+import UserCard from '../../components/user-card/user-card.component';
 
 const Profiles = () => (
   <div className="profiles-container">
-    <ContentSection />
+   <UserCard user={{name:"",imgUrl:"",status:"Active"}}/>
   </div>
 );
 

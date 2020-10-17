@@ -13,7 +13,6 @@ const ContentSection = ({ currentUser }) => (
         ></img>
         <div className={`status ${currentUser && currentUser.status}`} />
       </div>
-      {console.log(currentUser)}
       <span className="name">{currentUser && currentUser.name}</span>
       <p>{currentUser && currentUser.email}</p>
       <p> User since : {currentUser && currentUser.created_at}</p>

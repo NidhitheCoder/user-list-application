@@ -6,6 +6,11 @@ export const addUsersDataToStore = usersData => ({
 });
 
 export const addCurrentUserToStore = currentUser => ({
-  type:usersDataActionTypes.ADD_CURRENT_USER,
-  payload:currentUser
-})
+  type: usersDataActionTypes.ADD_CURRENT_USER,
+  payload: currentUser
+});
+
+export const addSearchToStore = keyword => ({
+  type: usersDataActionTypes.ADD_SEARCH,
+  payload: keyword
+});
