@@ -2,9 +2,11 @@ import React from "react";
 import "./left-menu.styles.scss";
 import { connect } from "react-redux";
 
+
 import UserCard from "../user-card/user-card.component";
 import image from "../../assets/userData";
 import { addUsersDataToStore } from "../../redux/usersData/users-data.action";
+import SearchInput from '../search/search.component';
 
 class LeftMenu extends React.Component {
   componentDidMount() {
@@ -24,6 +26,7 @@ class LeftMenu extends React.Component {
     const { dataFromStore } = this.props;
     return (
       <div className="left-menu">
+      <SearchInput />
         {dataFromStore &&
           dataFromStore.map(user => <UserCard key={user.id} user={user} />)}
       </div>
