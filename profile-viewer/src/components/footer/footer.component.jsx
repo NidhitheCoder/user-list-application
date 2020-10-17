@@ -3,7 +3,7 @@ import "./footer.styles.scss";
 
 const Footer = () => 
 <div className="footer">
-<p>need some styles here</p>
+<p>Copyright @2020</p>
 </div>;
 
 export default Footer;

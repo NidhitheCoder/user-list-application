@@ -12,11 +12,12 @@ const Profiles = ({ UsersDataFromStore }) => {
   return (
     <div className="visited-users">
     <h1>Visited Users</h1>
-      <div class="card-container">
-        {userData ? (
+      <div className="card-container">
+      {console.log(userData)}
+        {userData && userData.length ? (
           userData.map(user => <UserCard key={user.id} user={user} />)
         ) : (
-          <div> No visited users </div>
+          <div className="no-users"> No visited users </div>
         )}
       </div>
     </div>
