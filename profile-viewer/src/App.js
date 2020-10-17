@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar/navbar.component";
 import HomePage from "./pages/homePage/homePage.component";
-import Profiles from "./pages/profiles/profiles.component";
+import VisitedUsers from "./pages/VisitedUsers/VisitedUsers.component";
 import Footer from "./components/footer/footer.component";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/profiles" component={Profiles} />
+        <Route path="/VisitedUsers" component={VisitedUsers} />
       </Switch>
       <Footer />
     </div>

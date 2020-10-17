@@ -9,7 +9,7 @@ const Navbar = () => (
     <div className="navigation-container">
       <div>
         <Link className="navigation-button" to='/'>Home</Link>
-        <Link className="navigation-button" to='/profiles'>Profiles</Link>
+        <Link className="navigation-button" to='/VisitedUsers'>Visited Users</Link>
       </div>
     </div>
   </AppBar>
