@@ -4,7 +4,7 @@ import usersDataActionTypes from "./users-data.types";
 const INITIAL_STATE = {
   usersData: [],
   currentUser: null,
-  searchValue: null
+  searchValue: ""
 };
 
 const usersReducer = (state = INITIAL_STATE, action) => {
