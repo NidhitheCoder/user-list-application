@@ -1,11 +1,12 @@
 import usersDataActionTypes from "./users-data.types";
-import addVisitedCount from './users-data.utils'
+import AddVisitedUsers from './users-data.utils'
 
 
 const INITIAL_STATE = {
   usersData: [],
   currentUser: null,
-  searchValue: ""
+  searchValue: "",
+  visitedUsers:[]
 };
 
 const usersReducer = (state = INITIAL_STATE, action) => {
@@ -20,7 +21,7 @@ const usersReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentUser: action.payload,
-        usersData: addVisitedCount(state.usersData,action.payload)
+        visitedUsers:AddVisitedUsers(state.visitedUsers,action.payload)
       };
     case usersDataActionTypes.ADD_SEARCH:
       return {
