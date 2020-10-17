@@ -12,7 +12,8 @@
   padding: 25px 5px 5px 5px;
   overflow: hidden;
   transition: box-shadow 0.25s,opacity 0.25s;
-
+  cursor: pointer;
+  
   &:hover {
     opacity: 1;
   }
