@@ -5,17 +5,12 @@ import { connect } from "react-redux";
 import UserCard from "../../components/user-card/user-card.component";
 
 const Profiles = ({ UsersDataFromStore }) => {
-  let userData =
-    UsersDataFromStore &&
-    UsersDataFromStore.filter(user => user.visitCount !== undefined);
-
   return (
     <div className="visited-users">
-    <h1>Visited Users</h1>
+      <h1>Visited Users</h1>
       <div className="card-container">
-      {console.log(userData)}
-        {userData && userData.length ? (
-          userData.map(user => <UserCard key={user.id} user={user} />)
+        {UsersDataFromStore && UsersDataFromStore.length ? (
+          UsersDataFromStore.map(user => <UserCard key={user.id} user={user} />)
         ) : (
           <div className="no-users"> No visited users </div>
         )}
@@ -25,7 +20,7 @@ const Profiles = ({ UsersDataFromStore }) => {
 };
 
 const mapStateToProps = state => ({
-  UsersDataFromStore: state.userData.usersData
+  UsersDataFromStore: state.userData.visitedUsers
 });
 
 export default connect(mapStateToProps)(Profiles);

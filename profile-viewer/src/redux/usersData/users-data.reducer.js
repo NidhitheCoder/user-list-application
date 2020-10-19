@@ -1,12 +1,11 @@
 import usersDataActionTypes from "./users-data.types";
-import AddVisitedUsers from './users-data.utils'
-
+import AddVisitedUsers from "./users-data.utils";
 
 const INITIAL_STATE = {
   usersData: [],
   currentUser: null,
   searchValue: "",
-  visitedUsers:[]
+  visitedUsers: []
 };
 
 const usersReducer = (state = INITIAL_STATE, action) => {
@@ -21,7 +20,10 @@ const usersReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentUser: action.payload,
-        visitedUsers:AddVisitedUsers(state.visitedUsers,action.payload)
+        visitedUsers: AddVisitedUsers(
+          state.visitedUsers ? state.visitedUsers : [],
+          action.payload
+        )
       };
     case usersDataActionTypes.ADD_SEARCH:
       return {
