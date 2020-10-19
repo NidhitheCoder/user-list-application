@@ -18,6 +18,8 @@ const UserCard = ({ user,addUser}) => {
         />
         {user.status}
       </div>
+      {console.log(user)}
+      {user.visitedCount && <span>Number Of visits : {user.visitedCount}</span>}
     </div>
   );
 };

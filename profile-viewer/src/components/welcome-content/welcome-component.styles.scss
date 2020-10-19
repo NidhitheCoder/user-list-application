@@ -1,0 +1,14 @@
+.welcome {
+  background: transparent;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  p {
+    margin: 3vh 5vw;
+  }
+}
